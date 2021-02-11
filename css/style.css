@@ -9,6 +9,16 @@
   --dark-blue: rgb(47, 48, 58);
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -19,27 +29,42 @@
   font-family: "Roboto", sans-serif;
 }
 
-.indexheader {
+body {
+  width: 1600px;
+  }
+.header,
+.hero,
+.advantagesection,
+.activitiessection,
+.ourteamsection,
+.mainportfoliosection,
+.footer {
+  max-width: 1600px;
   padding-left: 215px;
   padding-right: 215px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* header */
+
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: var(--white);
-  max-width: 1600px; 
-  height: 80px;
   border: 1px;
   border-color: var(--light-grey);
   border-style: solid;
   display: flex;
+  align-items: baseline;
 
 }
 
 .h1 {
   font-weight: 700;
   font-size: 26px;
-  line-height: 36px;
+  line-height: 1.38;
   font-weight: 700;
-  margin-top: 24px;
-  margin-bottom: 25px;
-  float: left;
   color: var(--black);
   font-family: 'Raleway', sans-serif;
 }
@@ -52,10 +77,7 @@
 .nav {
   list-style-type: none;
   list-style-position: inside;
-  margin-bottom: 32px;
-  float: left;
   display: inline;
-  margin-top: 32px;
   margin-left: 93px;
   margin-right: 331px;
 
@@ -71,10 +93,6 @@
   letter-spacing: 2%;
 }
 
-.studio.current,
-.portfolio.current {
-  color: var(--blue);
-}
 
 .portfolio {
   margin-top: 32px;
@@ -86,8 +104,12 @@
   letter-spacing: 2%;
 }
 
+.studio.current,
+.portfolio.current {
+  color: var(--blue);
+}
+
 .contacts {
-  margin-top: 32px;
   display: inline;
   font-weight: 500;
   font-size: 14px;
@@ -149,11 +171,8 @@ address:focus {
   line-height: 16px;
   letter-spacing: 2%;
   color: var(--grey);
-  display: inline;
-  margin-top: 32px;
   list-style-type: none;
   list-style-position: inside;
-  float: left;
   margin-top: 32px;
 }
 
@@ -161,12 +180,15 @@ address:focus {
   margin-left: 50px;
 }
 
-.ordersection {
+.hero {
   height: 600px;
   padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--dark-blue);
   border: 1px;
   border-color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
 
 }
 
@@ -178,7 +200,7 @@ address:focus {
   text-align: center;
 }
 
-.orderbutton {
+.herobtn {
   width: 200px;
   height: 50px;
   background-color: var(--blue);
@@ -186,9 +208,10 @@ address:focus {
   box-shadow: x: 0px; y: 4px; b: 4px; s: 0px;
   border-radius: 4px;
   text-align: center;
+  align-items: center;
   margin-top: 30px;
-  margin-left: 700px;
-  margin-right: 700px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
@@ -198,39 +221,15 @@ address:focus {
 
 }
 
-.advantages {
+.advantlist {
   margin-top: 94px;
-  margin-left: 215px;
-  margin-right: 215px;
   margin-bottom: 94px;
   display: flex;
+  justify-content: space-between;
 }
 
-.attention {
-  display: inline;
+.advantage {
   width: 270px;
-  line-height: 17px;
-}
-
-.punctuality {
-  display: inline;
-  margin-left: 30px;
-  width: 270px;
-  line-height: 17px;
-}
-
-.planning {
-  display: inline;
-  margin-left: 30px;
-  width: 270px;
-  line-height: 17px;
-}
-
-.modern {
-  display: inline;
-  margin-left: 30px;
-  width: 270px;
-  line-height: 17px;
 }
 
 .advh4 {
@@ -255,11 +254,11 @@ address:focus {
     height: 42px;
 }
 
-.ul1 {
+.activitieslist {
     margin-top: 50px;
-    margin-left: 215px;
-    margin-right: 215px;
     margin-bottom: 94px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .img1 {
@@ -285,7 +284,6 @@ address:focus {
 }
 
 .ourteamsection {
-  margin-top: 438px;
   padding-top: 94px;
   height: 648px;
 }
@@ -302,7 +300,6 @@ address:focus {
   display: block;
   float: left;
   width: 270px;
-  margin-left: 215px;
   margin-top: 50px;
   margin-bottom: 95px;
 }
@@ -353,21 +350,23 @@ address:focus {
 
 .mainportfoliosection {
   padding-top: 100px;
-  padding-left: 215px;
 }
 
-.filterbuttons {
+.filters {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 50px;
-  margin-left: 280px;
-  margin-right: 494px;
-  margin-bottom: 34px;
+  /* margin-left: 280px;
+  margin-right: 494px; */
 
 }
 
-.alltypesbutton {
-  width: 73px;
-  height: 38px;
+.filterbtn {
+  padding-top: 6px; 
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-bottom: 6px;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
@@ -377,79 +376,10 @@ address:focus {
   margin-right: 8px;
   border-radius: 4px;
   border: none;
-  float:left
-}
- 
-.webbutton {
-  width: 128px;
-  height: 38px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
-  text-align: center;
-  background-color: var(--light-grey);
-  color: var(--black);
-  margin-right: 8px;
-  border-radius: 4px;
-  border: none;
-  float:left
 }
 
-.appbutton {
-  width: 145px;
-  height: 38px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
-  text-align: center;
-  background-color: var(--light-grey);
-  color: var(--black);
-  margin-right: 8px;
-  border-radius: 4px;
-  border: none;
-  float:left
-}
-
-
-.designbutton {
-  width: 103px;
-  height: 38px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
-  text-align: center;
-  background-color: var(--light-grey);
-  color: var(--black);
-  margin-right: 8px;
-  border-radius: 4px;
-  border: none;
-  float:left
-}
-
-.marketbutton {
-  width: 130px;
-  height: 38px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
-  text-align: center;
-  background-color: var(--light-grey);
-  color: var(--black);
-  border-radius: 4px;
-  border: none;
-  float:left
-}
-
-.alltypesbutton:hover,
-.alltypesbutton:focus,
-.webbutton:hover,
-.webbutton:focus,
-.appbutton:hover,
-.appbutton:focus,
-.designbutton:hover,
-.designbutton:focus, 
-.marketbutton:hover,
-.marketbutton:focus {
+.filterbtn:hover,
+.filterbtn:focus {
   background-color: var(--blue);
   color: var(--white);
   cursor: pointer;
@@ -458,7 +388,6 @@ address:focus {
 .portfitemlist {
   list-style-position: inside;
   margin-bottom: 1548px;
-
 }
 
 .portflistitem {
@@ -496,7 +425,6 @@ address:focus {
 }
 
 .footer {
-  padding-left: 215px;
   padding-top: 36px;
   max-width: 1600px;
   height: 252px;
