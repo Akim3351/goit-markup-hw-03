@@ -26,21 +26,12 @@ html {
   max-width: 1600px;
   box-sizing: border-box;
   line-height: 1.15;
-  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.03px;
   font-family: "Roboto", sans-serif;
 }
 
 body {
   width: 1600px;
-  }
-.container {
-  display: inherit;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: inherit;
 }
 
 /* header */
@@ -54,16 +45,25 @@ body {
   border-style: solid;
   display: flex;
   align-items: baseline;
-
 }
 
-.h1 {
+.headercontainer {
+  display: inherit;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: inherit;
+}
+
+.h1logo {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.38;
-  font-weight: 700;
   color: var(--black);
   font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.03em;;
 }
 
 .webprefix {
@@ -74,31 +74,19 @@ body {
 .nav {
   list-style-type: none;
   list-style-position: inside;
-  display: inline;
+  display: inline-block;
   margin-left: 93px;
   margin-right: 331px;
-
 }
 
-.studio {
-  margin-top: 32px;
-  margin-right: 50px;
+.studio,
+.portfolio,
+.contacts {
   display: inline;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  letter-spacing: 2%;
-}
-
-
-.portfolio {
-  margin-top: 32px;
-  margin-right: 50px;
-  display: inline;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 2%;
+  letter-spacing: 0.02em;
 }
 
 .studio.current,
@@ -106,12 +94,9 @@ body {
   color: var(--blue);
 }
 
-.contacts {
-  display: inline;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 2%;
+.studio,
+.portfolio {
+  margin-right: 50px;
 }
 
 .studio:link,
@@ -166,7 +151,7 @@ address:focus {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-  letter-spacing: 2%;
+  letter-spacing: 0.02em;;
   color: var(--grey);
   list-style-type: none;
   list-style-position: inside;
@@ -178,6 +163,17 @@ address:focus {
 
 /* main page - studio*/
 
+.herocontainer {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: inherit;
+}
+
 .hero {
   height: 600px;
   padding-top: 200px;
@@ -186,8 +182,6 @@ address:focus {
   border: 1px;
   border-color: var(--dark-blue);
   display: block;
-  /* flex-direction: column; */
-
 }
 
 .effective {
@@ -195,7 +189,9 @@ address:focus {
   font-weight: 900;
   font-size: 44px;
   line-height: 60px;
+  letter-spacing: 0.06em;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .herobtn {
@@ -203,7 +199,7 @@ address:focus {
   height: 50px;
   background-color: var(--blue);
   color: var(--white);
-  box-shadow: x: 0px; y: 4px; b: 4px; s: 0px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   text-align: center;
   align-items: center;
@@ -213,10 +209,17 @@ address:focus {
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
-  text-align: center;
-  letter-spacing: 6%;
+  letter-spacing: 0.06em;
+}
 
-
+.advcontainer {
+  display: inherit;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: inherit;
 }
 
 .advantlist {
@@ -235,6 +238,7 @@ address:focus {
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 10px;
+  letter-spacing: 0.03em;;
 }
 
 .advp {
@@ -242,21 +246,32 @@ address:focus {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  letter-spacing: 0.03em;;
+}
+
+.actcontainer {
+  display: inherit;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: inherit;
 }
 
 .activities {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    height: 42px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;   
+  text-align: center;
+  height: 42px;
 }
 
 .activitieslist {
-    margin-top: 50px;
-    margin-bottom: 94px;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 94px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .img1 {
@@ -278,56 +293,46 @@ address:focus {
   height: 294px;
   display: block;
   float: left;
-
 }
 
-.ourteamsection {
+.teamsection {
   padding-top: 94px;
   height: 648px;
+  background-color: var(--light-grey);
 }
 
-.ourteam {
+.teamcontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: inherit;
+  padding-bottom: 95px;
+}
+
+.team {
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
   text-align: center;
   height: 42px;
+  letter-spacing: 0.03em;;
 }
 
-.fig1 {
+.teamfigure {
   display: block;
-  float: left;
+  background-color: var(--white);
   width: 270px;
   margin-top: 50px;
-  margin-bottom: 95px;
-}
-
-.fig2 {
-  display: block;
-  float: left;
-  width: 270px;
-  margin-top: 50px;
-  margin-left: 30px;
-  margin-bottom: 95px;
-}
-
-.fig3 {
-  display: block;
-  float: left;
-  width: 270px;
-  margin-top: 50px;
-  margin-left: 30px;
-  margin-bottom: 95px;
-}
-
-.fig4 {
-  display: block;
-  float: left;
-  width: 270px;
-  margin-top: 50px;
-  margin-left: 30px;
-  margin-bottom: 95px;
-}
+  padding-bottom: 30px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
 
 .figcapt1 {
   font-weight: 500;
@@ -335,6 +340,7 @@ address:focus {
   text-align: center;
   margin-top: 30px;
   line-height: 19px;
+  letter-spacing: 0.03em;;
 }
 
 .figprofession {
@@ -344,12 +350,24 @@ address:focus {
   text-align: center;
   margin-top: 30px;
   line-height: 19px;
+  letter-spacing: 0.03em;;
 }
 
 /* main portfolio section */
 
 .mainportfoliosection {
   padding-top: 100px;
+}
+
+.portfcontainer {
+  display: block;
+  justify-content: space-between;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: inherit;
   padding-bottom: 94px;
 }
 
@@ -369,6 +387,7 @@ address:focus {
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
+  letter-spacing: 0.03em;;
   text-align: center;
   background-color: var(--light-grey);
   color: var(--black);
@@ -385,7 +404,6 @@ address:focus {
 }
 
 .portfitemlist {
-  /* width: 370px; */
   list-style-position: inside;
   display: flex;
   flex-wrap: wrap;
@@ -413,7 +431,7 @@ address:focus {
   font-weight: 700;
   font-size: 18px;
   line-height: 36px;
-  letter-spacing: 6%;
+  letter-spacing: 0.06em;
   text-align: left;
 }
 
@@ -424,12 +442,22 @@ address:focus {
   font-weight: 400;
   font-size: 18px;
   line-height: 36px;
-  letter-spacing: 3%;
+  letter-spacing: 0.03em;
   text-align: left;
   color: var(--grey);
 }
 
 /* footer */
+
+.footcontainer {
+  display: inherit;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: inherit;
+}
 
 .footer {
   padding-top: 36px;
@@ -439,10 +467,11 @@ address:focus {
 
 }
 
-.h1foot {
+.footlogo {
   font-weight: bold;
   font-size: 26px;
   line-height: 36px;
+  letter-spacing: 0.03em;;
   margin-top: 24px;
   margin-right: 93px;
   margin-bottom: 25px;
@@ -464,6 +493,7 @@ address:focus {
   color: var(--white);
   font-weight: 400;
   font-size: 14px;
+  letter-spacing: 0.03em;;
   height: 24px;
   margin-top: 20px;
 }
@@ -472,6 +502,7 @@ address:focus {
   color: var(--white-op60);
   font-weight: 400;
   font-size: 14px;
+  letter-spacing: 0.03em;;
   margin-top: 9px;
   height: 24px;
   text-decoration: none;
