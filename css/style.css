@@ -427,7 +427,7 @@ address:focus {
   margin-top: 20px;
   margin-left: 24px;
   margin-right: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 36px;
@@ -436,9 +436,9 @@ address:focus {
 }
 
 .portftype {
-  margin-top: 4px;
   margin-left: 24px;
   margin-right: 24px;
+  margin-bottom: 20px;
   font-weight: 400;
   font-size: 18px;
   line-height: 36px;
