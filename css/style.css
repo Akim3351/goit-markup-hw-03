@@ -32,6 +32,7 @@ html {
 
 body {
   width: 1600px;
+  overflow-x: hidden;
 }
 
 /* header */
@@ -200,6 +201,7 @@ address:focus {
   background-color: var(--blue);
   color: var(--white);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
   text-align: center;
   align-items: center;
